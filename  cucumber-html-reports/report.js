@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/add/Add2.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/add/Add.feature");
 formatter.feature({
   "line": 1,
   "name": "Have a functionality that when it receives a Text that contain numbers split by delimiters as",
@@ -109,15 +109,15 @@ formatter.match({
   "location": "MyStepdefs.anInput(String)"
 });
 formatter.result({
-  "duration": 116677240,
+  "duration": 111069001,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStepdefs.youSumAllTheNumbersInTheInput()"
 });
 formatter.result({
-  "duration": 886807,
-  "error_message": "java.lang.NullPointerException\n\tat com.oramon.stringcalculator.impl.StringCalculatorImpl.sum(StringCalculatorImpl.java:27)\n\tat com.oramon.stringcalculator.integration.features.add.MyStepdefs.youSumAllTheNumbersInTheInput(MyStepdefs.java:32)\n\tat ✽.When you sum all the numbers in the input(features/add/Add2.feature:6)\n",
+  "duration": 864706,
+  "error_message": "java.lang.NullPointerException\n\tat com.oramon.stringcalculator.impl.StringCalculatorImpl.sum(StringCalculatorImpl.java:27)\n\tat com.oramon.stringcalculator.integration.features.add.MyStepdefs.youSumAllTheNumbersInTheInput(MyStepdefs.java:32)\n\tat ✽.When you sum all the numbers in the input(features/add/Add.feature:6)\n",
   "status": "failed"
 });
 formatter.match({
@@ -171,15 +171,15 @@ formatter.match({
   "location": "MyStepdefs.anInput(String)"
 });
 formatter.result({
-  "duration": 1009121,
+  "duration": 1406916,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStepdefs.youSumAllTheNumbersInTheInput()"
 });
 formatter.result({
-  "duration": 199203,
-  "error_message": "java.lang.NullPointerException\n\tat com.oramon.stringcalculator.impl.StringCalculatorImpl.sum(StringCalculatorImpl.java:27)\n\tat com.oramon.stringcalculator.integration.features.add.MyStepdefs.youSumAllTheNumbersInTheInput(MyStepdefs.java:32)\n\tat ✽.When you sum all the numbers in the input(features/add/Add2.feature:6)\n",
+  "duration": 282200,
+  "error_message": "java.lang.NullPointerException\n\tat com.oramon.stringcalculator.impl.StringCalculatorImpl.sum(StringCalculatorImpl.java:27)\n\tat com.oramon.stringcalculator.integration.features.add.MyStepdefs.youSumAllTheNumbersInTheInput(MyStepdefs.java:32)\n\tat ✽.When you sum all the numbers in the input(features/add/Add.feature:6)\n",
   "status": "failed"
 });
 formatter.match({
@@ -233,15 +233,15 @@ formatter.match({
   "location": "MyStepdefs.anInput(String)"
 });
 formatter.result({
-  "duration": 989001,
+  "duration": 1408761,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStepdefs.youSumAllTheNumbersInTheInput()"
 });
 formatter.result({
-  "duration": 290083,
-  "error_message": "java.lang.NullPointerException\n\tat com.oramon.stringcalculator.impl.StringCalculatorImpl.sum(StringCalculatorImpl.java:27)\n\tat com.oramon.stringcalculator.integration.features.add.MyStepdefs.youSumAllTheNumbersInTheInput(MyStepdefs.java:32)\n\tat ✽.When you sum all the numbers in the input(features/add/Add2.feature:6)\n",
+  "duration": 291906,
+  "error_message": "java.lang.NullPointerException\n\tat com.oramon.stringcalculator.impl.StringCalculatorImpl.sum(StringCalculatorImpl.java:27)\n\tat com.oramon.stringcalculator.integration.features.add.MyStepdefs.youSumAllTheNumbersInTheInput(MyStepdefs.java:32)\n\tat ✽.When you sum all the numbers in the input(features/add/Add.feature:6)\n",
   "status": "failed"
 });
 formatter.match({
