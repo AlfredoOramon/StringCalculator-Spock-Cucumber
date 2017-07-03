@@ -28,18 +28,4 @@ public class StringCalculatorImpl implements StringCalculator{
         int result = processor.sumAllTheNumber(numbers);
         return result;
     }
-
-//    private int sumAllTheNumber(ArrayList<Integer> numbers) {
-//
-//    }
-//
-//    private ArrayList<Integer> getNumbersSplitByDelimiter(String inputText) {
-//        ArrayList<Integer> numbersList = new ArrayList<>();
-//
-//        String[] numbersArray = inputText.split("-");
-//        for (String number : numbersArray) {
-//            numbersList.add(Integer.valueOf(number));
-//        }
-//        return numbersList;
-//    }
 }
