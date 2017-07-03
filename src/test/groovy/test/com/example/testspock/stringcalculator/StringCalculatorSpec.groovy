@@ -1,7 +1,12 @@
 package test.com.example.testspock.stringcalculator
 
 import com.oramon.stringcalculator.impl.StringCalculatorImpl
+import com.oramon.stringcalculator.interfaces.ListProcessor
+import com.oramon.stringcalculator.interfaces.Splitter
 import com.oramon.stringcalculator.interfaces.StringCalculator
+import org.mockito.InjectMocks
+import org.mockito.Mock
+import org.mockito.MockitoAnnotations
 import spock.lang.Specification
 
 /**
@@ -15,18 +20,34 @@ import spock.lang.Specification
  */
 class StringCalculatorSpec extends Specification {
 
-    def "Should return the sum of two numbers contained in a input text, split by a coma delimiter"()
-    {
-        given: "two numbers in a input String"
+    @Mock
+    private Splitter splitter
 
-        String inputText = "1,2"
+    @Mock
+    private ListProcessor listProcessor
+
+    @InjectMocks
+    private StringCalculator SUT
+
+    def setup() {
+        SUT = new StringCalculatorImpl()
+        MockitoAnnotations.initMocks(this)
+    }
+
+    def "Should return the sum of two numbers contained in a input text, split by a coma delimiter"(String text, int sumNumbers) {
+        given: "two numbers in a input String"
+        String inputText = text
 
         when: "we sum the two number of the input String"
-
-        StringCalculator stringCalculator = new StringCalculatorImpl()
-        int sumResult = stringCalculator.sum(inputText)
+        int sumResult = SUT.sum(inputText)
 
         then: "the result of the sum of the two numbers"
-        sumResult == 3.0
+        sumResult == sumNumbers
+
+        where:
+        text  | sumNumbers
+        "1,2" | 3
+        "1,3" | 4
+        "0,2" | 2
     }
 }

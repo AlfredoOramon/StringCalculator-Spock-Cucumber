@@ -1,6 +1,11 @@
 package com.oramon.stringcalculator.impl;
 
+import com.oramon.stringcalculator.interfaces.ListProcessor;
+import com.oramon.stringcalculator.interfaces.Splitter;
 import com.oramon.stringcalculator.interfaces.StringCalculator;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 /**
  * ClassName
@@ -10,8 +15,31 @@ import com.oramon.stringcalculator.interfaces.StringCalculator;
  * Date: 27/06/17 16:16
  */
 public class StringCalculatorImpl implements StringCalculator{
+
+    @Autowired
+    Splitter splitter;
+
+    @Autowired
+    ListProcessor processor;
+
     @Override
-    public int sum(String inputText) {
-        return 3;
+    public final int sum(String inputText) {
+        List<Integer> numbers = splitter.getNumbersSplitByDelimiter(inputText);
+        int result = processor.sumAllTheNumber(numbers);
+        return result;
     }
+
+//    private int sumAllTheNumber(ArrayList<Integer> numbers) {
+//
+//    }
+//
+//    private ArrayList<Integer> getNumbersSplitByDelimiter(String inputText) {
+//        ArrayList<Integer> numbersList = new ArrayList<>();
+//
+//        String[] numbersArray = inputText.split("-");
+//        for (String number : numbersArray) {
+//            numbersList.add(Integer.valueOf(number));
+//        }
+//        return numbersList;
+//    }
 }

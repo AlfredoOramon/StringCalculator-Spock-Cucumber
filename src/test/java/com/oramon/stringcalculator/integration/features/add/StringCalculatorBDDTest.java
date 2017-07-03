@@ -1,7 +1,7 @@
 package com.oramon.stringcalculator.integration.features.add;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 /**
@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
  * <p>
  * Date: 28/06/17 9:40
  */
-@RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources")
+@RunWith(CucumberWithSerenity.class)
+@CucumberOptions(features = "src/test/resources", format = { "pretty","html: cucumber-html-reports",
+        "json: cucumber-html-reports/cucumber.json" })
 public class StringCalculatorBDDTest {
 }
